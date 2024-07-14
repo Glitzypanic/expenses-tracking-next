@@ -8,7 +8,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Expense Tracker",
+  title: "GTracker",
   description: "A simple expense tracker",
 };
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={`${roboto.className} antialiased`}>{children}</body>
     </html>
   );
 }
