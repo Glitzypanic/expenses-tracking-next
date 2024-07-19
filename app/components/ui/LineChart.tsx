@@ -10,13 +10,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "@/components/chart";
 const chartData = [
   { month: "January", Income: 186, Expenses: 80 },
   { month: "February", Income: 305, Expenses: 200 },
@@ -40,7 +40,7 @@ const chartConfig = {
 export default function Component() {
   return (
     <div className="dark">
-      <Card className="w-[400px] border-none">
+      <Card className="mr-4 border-none">
         <CardHeader>
           <CardTitle>Monthly Balance</CardTitle>
           <CardDescription>January - June 2024</CardDescription>
