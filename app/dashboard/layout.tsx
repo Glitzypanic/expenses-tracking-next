@@ -1,12 +1,16 @@
-import SideNav from "../../components/dashboard/SideNav";
+import SideNav from "../components/SideNav";
+import Header from "../components/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+    <div className="flex h-screen flex-col md:flex-row md:overflow-y-scroll bg-[#1A1A1A] text-[#F5F5F5]">
       <div className="w-full flex-none md:w-64">
         <SideNav />
       </div>
-      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+      <section className="flex w-full flex-col">
+        <Header />
+        <div>{children}</div>
+      </section>
     </div>
   );
 }
