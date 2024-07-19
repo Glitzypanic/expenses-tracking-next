@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="flex justify-between items-center rounded-lg p-6 mx-5 my-4 bg-[#0A0A0A]">
+    <header className="flex justify-between items-center rounded-lg p-6 mx-5 mt-4 bg-[#0A0A0A]">
       <div className="flex flex-col">
         <h1 className="text-3xl font-bold">Dashboard</h1>
         <h2 className="text-[#9ca3af]">
