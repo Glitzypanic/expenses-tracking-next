@@ -1,0 +1,7 @@
+export interface MockData {
+  id: number;
+  order: string;
+  amount: string;
+  date: string;
+  payment: string;
+}
