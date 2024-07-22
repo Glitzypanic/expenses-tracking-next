@@ -12,8 +12,8 @@ export default function SideNav() {
       activeIcon: "/Dashboard.svg",
     },
     {
-      href: "/dashboard/transactions",
-      label: "Transactions",
+      href: "/dashboard/payments",
+      label: "Payments",
       icon: "/Transaction-w.svg",
       activeIcon: "/Transaction.svg",
     },
@@ -45,7 +45,7 @@ export default function SideNav() {
   };
 
   return (
-    <nav className="w-64 min-h-screen flex flex-col bg-[#0A0A0A]">
+    <nav className="w-64 absolute h-full flex flex-col bg-[#0A0A0A]">
       <header className="flex justify-center items-center gap-2 px-5 py-10">
         <Image
           className="rounded-lg"
