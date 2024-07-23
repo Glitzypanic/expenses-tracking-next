@@ -18,12 +18,6 @@ export default function SideNav() {
       activeIcon: "/Transaction.svg",
     },
     {
-      href: "/dashboard/budget",
-      label: "Budgets",
-      icon: "/Budget-w.svg",
-      activeIcon: "/Budget.svg",
-    },
-    {
       href: "/dashboard/savings",
       label: "Savings",
       icon: "/Save-w.svg",
