@@ -1,14 +1,15 @@
 import { faker } from "@faker-js/faker";
 
 export interface User {
-  id: number;
-  order: string;
+  id: string;
+  name: string;
   amount: string;
-  payment: string;
+  date: string;
+  status: "Paid" | "Unpaid";
 }
 
 export const generateData = (numRecords: number) => {
-  const order = [
+  const name = [
     "spotify",
     "apple",
     "amazon",
@@ -25,10 +26,11 @@ export const generateData = (numRecords: number) => {
   const data: User[] = [];
   for (let i = 0; i < numRecords; i++) {
     data.push({
-      id: i,
-      order: order[Math.floor(Math.random() * order.length)],
-      amount: faker.finance.amount(),
-      payment: faker.finance.account(),
+      id: faker.random.alphaNumeric(5), // Genera un valor aleatorio de tipo "string" con 10 caracteres alfanuméricos
+      name: name[Math.floor(Math.random() * name.length)], // Genera un valor aleatorio de la lista "name"
+      amount: faker.finance.amount(), // Genera un valor aleatorio de tipo "string" en formato "$123.45"
+      date: faker.date.anytime().toISOString().split("T")[0], // Genera una fecha aleatoria y la convierte a un string en formato "YYYY-MM-DD"
+      status: Math.random() > 0.5 ? "Paid" : "Unpaid", // Genera un valor aleatorio entre "Paid" y "Unpaid"
     });
   }
   return data;
