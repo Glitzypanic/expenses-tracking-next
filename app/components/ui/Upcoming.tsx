@@ -1,4 +1,4 @@
-import { Slider } from "@/components/slider";
+import { Progress } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function Upcoming() {
@@ -16,7 +16,7 @@ export default function Upcoming() {
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex gap-5">
-          <div className="bg-[#CCFF00] rounded-lg p-1">
+          <div className="bg-white rounded-lg p-1">
             <Image src="/Home.svg" alt="" width={40} height={40} />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
@@ -26,11 +26,16 @@ export default function Upcoming() {
                 <span>$2,300/</span>$8,000
               </p>
             </div>
-            <Slider defaultValue={[20]} max={100} step={1} />
+            <Progress
+              value={40}
+              classNames={{
+                indicator: "bg-[#CCFF00]",
+              }}
+            />
           </div>
         </div>
         <div className="flex gap-5">
-          <div className="bg-[#CCFF00] rounded-lg p-1">
+          <div className="bg-white rounded-lg p-1">
             <Image src="/Car.svg" alt="" width={40} height={40} />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
@@ -40,11 +45,16 @@ export default function Upcoming() {
                 <span>$2,300/</span>$8,000
               </p>
             </div>
-            <Slider defaultValue={[70]} max={100} step={1} />
+            <Progress
+              value={40}
+              classNames={{
+                indicator: "bg-[#CCFF00]",
+              }}
+            />
           </div>
         </div>
         <div className="flex gap-5">
-          <div className="bg-[#CCFF00] rounded-lg p-1">
+          <div className="bg-white rounded-lg p-1">
             <Image src="/Vacation.svg" alt="" width={40} height={40} />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
@@ -54,7 +64,12 @@ export default function Upcoming() {
                 <span>$2,300/</span>$8,000
               </p>
             </div>
-            <Slider defaultValue={[10]} max={100} step={1} />
+            <Progress
+              value={40}
+              classNames={{
+                indicator: "bg-[#CCFF00]",
+              }}
+            />
           </div>
         </div>
       </div>
