@@ -1,4 +1,4 @@
-import { Slider } from "@/components/slider";
+import { Progress } from "@nextui-org/react";
 
 export default function SavingGoal() {
   return (
@@ -6,22 +6,22 @@ export default function SavingGoal() {
       <div className="flex justify-between">
         <div className="block">
           <h2 className="text-2xl font-bold">Saving Goals</h2>
-          <span className="text-[#9ca3af]">75% Progress</span>
-        </div>
-        <div>
-          <button className="h-fit border-2 rounded-lg p-2 hover:border-[#CCFF00]">
-            View Report
-          </button>
+          <span className="text-[#9ca3af]">68% Progress</span>
         </div>
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex items-end gap-5">
           <h2 className="text-5xl">
-            <span className="text-[#CCFF00]">$</span>1,200
+            <span className="text-[#CCFF00]">$</span>3,800
           </h2>
-          <span className="text-[#9ca3af]">of $2,000</span>
+          <span className="text-[#9ca3af]">of $5,000</span>
         </div>
-        <Slider defaultValue={[40]} max={100} step={1} />
+        <Progress
+          value={68}
+          classNames={{
+            indicator: "bg-[#CCFF00]",
+          }}
+        />
       </div>
     </section>
   );
