@@ -7,8 +7,13 @@ const PaymentsPage = () => {
 
   return (
     <div className="bg-[#0A0A0A] rounded-lg col-span-2 px-6 h-full m-5">
-      <h2 className="text-4xl font-bold pt-6">Transactions</h2>
-      <table className="min-w-full text-left mt-7 mb-[26px] border-b border-white">
+      <div className="flex justify-between py-6">
+        <h2 className="text-3xl font-bold">Transactions</h2>
+        <button className="border border-white px-4 rounded-lg hover:border-[#CCFF00]">
+          + Create payment
+        </button>
+      </div>
+      <table className="min-w-full text-left  mb-[26px] border-b border-white">
         <thead className="border border-white">
           <tr>
             <th className="py-3 px-4">Id</th>
