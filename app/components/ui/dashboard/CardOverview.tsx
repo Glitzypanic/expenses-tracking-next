@@ -3,6 +3,11 @@ export default function CardOverview({
   value,
   percentage,
   description,
+}: {
+  title: string;
+  value: string;
+  percentage: string;
+  description: string;
 }) {
   return (
     <article>
