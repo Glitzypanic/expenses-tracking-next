@@ -11,6 +11,8 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "GTracker",
   description: "A simple expense tracker",
+  viewport: "width=device-width, initial-scale=1",
+  icons: ["icon.ico"],
 };
 
 export default function RootLayout({
