@@ -12,14 +12,14 @@ const NewGoal = () => {
             placeholder="Name"
           />
           <input
-            type="number"
+            type="text"
             className="p-2 rounded-lg"
             name=""
             id=""
             placeholder="Goal mount"
           />
           <input
-            type="number"
+            type="text"
             className="p-2 rounded-lg"
             name=""
             id=""
