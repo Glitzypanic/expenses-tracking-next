@@ -5,12 +5,12 @@ const SavingCalc = () => {
       <label className="w-fit inline-flex gap-3 mt-3">
         <input
           className="p-2 rounded-lg"
-          type="number"
+          type="text"
           placeholder="Amount to save"
         />
         <input
           className="p-2 rounded-lg"
-          type="number"
+          type="text"
           placeholder="Number of months"
         />
       </label>
