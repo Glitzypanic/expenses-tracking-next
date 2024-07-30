@@ -1,15 +1,15 @@
 const SavingCalc = () => {
   return (
-    <div className="w-full h-32 flex flex-col justify-center p-5">
+    <div className="w-full h-fit bg-[#0A0A0A] round flex flex-col justify-center p-5">
       <h3 className="font-semibold text-2xl">Calculate your savings</h3>
       <label className="w-fit inline-flex gap-3 mt-3">
         <input
-          className="p-2 rounded-lg"
+          className="p-2 rounded-lg focus:outline-[#CCFF00]"
           type="text"
           placeholder="Amount to save"
         />
         <input
-          className="p-2 rounded-lg"
+          className="p-2 rounded-lg focus:outline-[#CCFF00]"
           type="text"
           placeholder="Number of months"
         />
