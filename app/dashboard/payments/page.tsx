@@ -1,5 +1,5 @@
 import { generateData, User } from "@/lib/utils/generateData";
-import { Pagination, PaginationCursor } from "@nextui-org/pagination";
+import { Pagination } from "@nextui-org/pagination";
 import clsx from "clsx";
 
 const PaymentsPage = () => {
