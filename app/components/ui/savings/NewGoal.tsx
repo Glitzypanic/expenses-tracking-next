@@ -5,6 +5,7 @@ const NewGoal = () => {
       <div>
         <label className="w-fit inline-flex gap-3 mt-3">
           <input
+            aria-label="Name"
             type="text"
             className="p-2 rounded-lg focus:outline-[#CCFF00]"
             name=""
@@ -12,6 +13,7 @@ const NewGoal = () => {
             placeholder="Name"
           />
           <input
+            aria-label="Goal mount"
             type="text"
             className="p-2 rounded-lg focus:outline-[#CCFF00]"
             name=""
@@ -19,6 +21,7 @@ const NewGoal = () => {
             placeholder="Goal mount"
           />
           <input
+            aria-label="Actual mount"
             type="text"
             className="p-2 rounded-lg focus:outline-[#CCFF00]"
             name=""
@@ -26,7 +29,10 @@ const NewGoal = () => {
             placeholder="Actual mount"
           />
         </label>
-        <button className="bg-white text-black hover:bg-[#CCFF00] w-fit px-10 py-2 ml-5 rounded-lg">
+        <button
+          aria-label="Add"
+          className="bg-white text-black hover:bg-[#CCFF00] w-fit px-10 py-2 ml-5 rounded-lg"
+        >
           Add
         </button>
       </div>
