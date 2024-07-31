@@ -26,7 +26,7 @@ const PaymentsPage = () => {
         <tbody className="divide-y divide-gray-200">
           {users.map((user) => (
             <tr key={user.id}>
-              <td className="py-2 px-4 text-[#9ca3af]">#{user.id}</td>
+              <td className="py-2 px-4 text-[#9ca3af]">INV00{user.id}</td>
               <div className="py-2">
                 <td
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
