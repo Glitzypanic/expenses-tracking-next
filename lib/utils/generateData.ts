@@ -26,7 +26,7 @@ export const generateData = (numRecords: number) => {
   const data: User[] = [];
   for (let i = 0; i < numRecords; i + 1) {
     data.push({
-      id: i,
+      id: i, // Genera un valor incremental
       name: name[Math.floor(Math.random() * name.length)], // Genera un valor aleatorio de la lista "name"
       amount: faker.finance.amount(), // Genera un valor aleatorio de tipo "string" en formato "$123.45"
       date: faker.date.anytime().toISOString().split("T")[0], // Genera una fecha aleatoria y la convierte a un string en formato "YYYY-MM-DD"
