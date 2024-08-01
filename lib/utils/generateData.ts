@@ -24,7 +24,7 @@ export const generateData = (numRecords: number) => {
     "mortgage",
   ];
   const data: User[] = [];
-  for (let i = 0; i < numRecords; i + 1) {
+  for (let i = 0; i < numRecords; i += 1) {
     data.push({
       id: i, // Genera un valor incremental
       name: name[Math.floor(Math.random() * name.length)], // Genera un valor aleatorio de la lista "name"
