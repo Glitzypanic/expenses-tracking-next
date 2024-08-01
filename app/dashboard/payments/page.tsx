@@ -3,8 +3,7 @@ import { Pagination } from "@nextui-org/pagination";
 import clsx from "clsx";
 
 const PaymentsPage = () => {
-  const users: User[] = generateData(15); // Genera 10 registros de ejemplo
-
+  const users: User[] = generateData(15);
   return (
     <div className="bg-[#0A0A0A] rounded-lg col-span-2 px-6 h-full m-5">
       <div className="flex justify-between py-6">
@@ -26,7 +25,7 @@ const PaymentsPage = () => {
         <tbody className="divide-y divide-gray-200">
           {users.map((user) => (
             <tr key={user.id}>
-              <td className="py-2 px-4 text-[#9ca3af]">{user.id}</td>
+              <td className="py-2 px-4 text-[#9ca3af]">INV0{user.id}</td>
               <div className="py-2">
                 <td
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
