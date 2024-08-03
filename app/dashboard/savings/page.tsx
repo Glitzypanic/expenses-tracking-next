@@ -24,6 +24,8 @@ export default function ExpensesPage() {
           visibleMonths={3}
           classNames={{
             gridBody: "bg-[#0A0A0A]",
+            base: "shadow-none",
+            gridWrapper: "bg-[#0A0A0A]",
           }}
         />
       </section>
