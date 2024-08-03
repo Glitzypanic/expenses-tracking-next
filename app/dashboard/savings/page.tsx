@@ -2,11 +2,12 @@ import PieChart from "../../components/ui/dashboard/PieChart";
 import NewGoal from "@/app/components/ui/savings/NewGoal";
 import CurrGoal from "@/app/components/ui/savings/CurrGoal";
 import SavingCalc from "@/app/components/ui/savings/SavingCalc";
+import { Calendar, colorVariants } from "@nextui-org/react";
 
 export default function ExpensesPage() {
   return (
     <div className=" col-span-2 h-full mx-5 mt-5">
-      <section className=" flex gap-5 rounded-lg p-5 w-fit border-2 border-white">
+      <section className=" flex gap-5 rounded-lg w-fit">
         <div className="bg-[#0A0A0A] rounded-lg p-5 w-fit">
           <h2 className="text-3xl font-bold">Savings</h2>
           <PieChart />
@@ -16,6 +17,15 @@ export default function ExpensesPage() {
           <CurrGoal />
           <NewGoal />
         </div>
+      </section>
+      <section className="mt-5 rounded-lg p-5 bg-[#0A0A0A] w-fit">
+        <Calendar
+          aria-label="Date (Visible Month)"
+          visibleMonths={3}
+          classNames={{
+            gridBody: "bg-[#0A0A0A]",
+          }}
+        />
       </section>
     </div>
   );
