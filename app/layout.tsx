@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Providers } from "./provider";
+import { NextProviders } from "./NextProvider";
+import { ChakraProviders } from "./ChakraProvider";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${roboto.className} antialiased`}>
-        <Providers>{children}</Providers>
+        <ChakraProviders>
+          <NextProviders>{children}</NextProviders>
+        </ChakraProviders>
       </body>
     </html>
   );
