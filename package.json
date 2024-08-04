@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@faker-js/faker": "^8.4.1",
     "@nextui-org/pagination": "^2.0.35",
     "@nextui-org/progress": "^2.0.33",
@@ -18,7 +21,7 @@
     "@vercel/postgres": "^0.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.19",
+    "framer-motion": "^11.3.21",
     "lucide-react": "^0.416.0",
     "next": "14.2.5",
     "react": "^18.3.1",
