@@ -11,7 +11,7 @@ export default function Tips() {
 
   const randomTip = tips[Math.floor(Math.random() * tips.length)];
   return (
-    <div className="flex flex-col justify-center bg-[#7A306C] rounded-lg h-full p-5">
+    <div className="flex flex-col justify-center bg-[#7A306C] rounded-lg h-full w-full p-5">
       <Image
         src={"/Euro.svg"}
         alt="sdf"
