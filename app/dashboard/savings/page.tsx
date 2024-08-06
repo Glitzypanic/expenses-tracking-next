@@ -1,9 +1,8 @@
-import PieChart from "../../components/ui/dashboard/PieChart";
-import NewGoal from "@/app/components/ui/savings/NewGoal";
-import CurrGoal from "@/app/components/ui/savings/CurrGoal";
-import SavingCalc from "@/app/components/ui/savings/SavingCalc";
 import { Calendar } from "@nextui-org/react";
-import { Stats } from "@/app/components/ui/savings/Stats";
+import CurrGoal from "@/app/components/ui/savings/CurrGoal";
+import NewGoal from "@/app/components/ui/savings/NewGoal";
+import PieChart from "../../components/ui/dashboard/PieChart";
+import SavingCalc from "@/app/components/ui/savings/SavingCalc";
 import Tips from "@/app/components/ui/savings/Tips";
 import TopExpenses from "@/app/components/ui/savings/TopExpenses";
 
