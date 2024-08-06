@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen flex-col md:flex-row md:overflow-y-scroll bg-[#1A1A1A] text-[#F5F5F5]">
+    <div className="flex h-screen flex-col md:flex-row md:overflow-y-scroll bg-[#1A1A1A] text-[#F5F5F5] dark">
       <div className="w-full flex-none md:w-64">
         <SideNav />
       </div>
