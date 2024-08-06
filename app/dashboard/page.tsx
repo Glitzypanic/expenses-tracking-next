@@ -1,9 +1,9 @@
+import CardOverview from "../components/ui/dashboard/CardOverview";
 import LineChart from "../components/ui/dashboard/LineChart";
 import PieChart from "../components/ui/dashboard/PieChart";
-import CardOverview from "../components/ui/dashboard/CardOverview";
 import SavingGoal from "../components/ui/dashboard/SavingGoal";
-import Upcoming from "../components/ui/dashboard/Upcoming";
 import TableDaily from "../components/ui/dashboard/TableDaily";
+import Upcoming from "../components/ui/dashboard/Upcoming";
 
 export default function Page() {
   return (
