@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { NextProviders } from "./NextProvider";
-import { ChakraProviders } from "./ChakraProvider";
-import { Roboto } from "next/font/google";
 import "./globals.css";
+import { ChakraProviders } from "./ChakraProvider";
+import { NextProviders } from "./NextProvider";
+import { Roboto } from "next/font/google";
+import type { Metadata } from "next";
 
 const roboto = Roboto({
   subsets: ["latin"],
