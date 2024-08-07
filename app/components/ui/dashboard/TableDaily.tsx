@@ -23,7 +23,7 @@ const TableDaily: React.FC = () => {
             <th className="py-3 px-4">Order</th>
             <th className="py-3 px-4">Amount</th>
             <th className="py-3 px-4">Date</th>
-            <th className="py-3 px-4">Payment</th>
+            <th className="py-3">Status</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
@@ -35,11 +35,11 @@ const TableDaily: React.FC = () => {
               <div className="py-2">
                 <th
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
-                    "bg-[#c4f9e4]  text-[#28895e]": data.payment === "Paid",
-                    "bg-[#dfd3ff] text-[#7d62ca]": data.payment === "Unpaid",
+                    "bg-[#c4f9e4]  text-[#28895e]": data.status === "Paid",
+                    "bg-[#dfd3ff] text-[#7d62ca]": data.status === "Unpaid",
                   })}
                 >
-                  {data.payment}
+                  {data.status}
                 </th>
               </div>
             </tr>
