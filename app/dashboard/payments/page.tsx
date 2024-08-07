@@ -16,16 +16,19 @@ const PaymentsPage = () => {
         <thead className="border border-white">
           <tr>
             <th className="py-3 px-4">Id</th>
-            <th className="py-3 px-4">Status</th>
-            <th className="py-3 px-4">Name</th>
+            <th className="py-3 px-4">Order</th>
             <th className="py-3 px-4">Amount</th>
             <th className="py-3 px-4">Date</th>
+            <th className="py-3">Status</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
           {users.map((user) => (
             <tr key={user.id}>
               <td className="py-2 px-4 text-[#9ca3af]">INV0{user.id}</td>
+              <td className="py-2 px-4">{user.order}</td>
+              <td className="py-2 px-4">$ {user.amount}</td>
+              <td className="py-2 px-4">{user.date}</td>
               <div className="py-2">
                 <td
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
@@ -36,9 +39,6 @@ const PaymentsPage = () => {
                   {user.status}
                 </td>
               </div>
-              <td className="py-2 px-4">{user.name}</td>
-              <td className="py-2 px-4">$ {user.amount}</td>
-              <td className="py-2 px-4">{user.date}</td>
             </tr>
           ))}
         </tbody>
