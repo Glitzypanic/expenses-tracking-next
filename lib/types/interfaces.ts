@@ -3,5 +3,5 @@ export interface MockData {
   order: string;
   amount: string;
   date: string;
-  payment: string;
+  status: string;
 }
