@@ -1,6 +1,6 @@
 import "./globals.css";
-import { ChakraProviders } from "./ChakraProvider";
-import { NextProviders } from "./NextProvider";
+import { ChakraProviders } from "./providers/ChakraProvider";
+import { NextProviders } from "./providers/NextProvider";
 import { Roboto } from "next/font/google";
 import type { Metadata } from "next";
 

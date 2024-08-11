@@ -20,7 +20,7 @@ export default function Upcoming() {
       <div className="flex flex-col gap-5">
         <div className="flex gap-5">
           <div className="bg-white rounded-lg p-1">
-            <Image src="/Home.svg" alt="" width={40} height={40} />
+            <Image src="/assets/svgs/Home.svg" alt="" width={40} height={40} />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
             <div className="flex justify-between items-end">
@@ -39,7 +39,7 @@ export default function Upcoming() {
         </div>
         <div className="flex gap-5">
           <div className="bg-white rounded-lg p-1">
-            <Image src="/Car.svg" alt="" width={40} height={40} />
+            <Image src="/assets/svgs/Car.svg" alt="" width={40} height={40} />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
             <div className="flex justify-between items-end">
@@ -58,7 +58,12 @@ export default function Upcoming() {
         </div>
         <div className="flex gap-5">
           <div className="bg-white rounded-lg p-1">
-            <Image src="/Vacation.svg" alt="" width={40} height={40} />
+            <Image
+              src="/assets/svgs/Vacation.svg"
+              alt=""
+              width={40}
+              height={40}
+            />
           </div>
           <div className="flex flex-col w-[300px] justify-between gap-2">
             <div className="flex justify-between items-end">

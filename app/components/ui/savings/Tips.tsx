@@ -13,7 +13,7 @@ export default function Tips() {
   return (
     <div className="flex flex-col justify-center bg-[#7A306C] rounded-lg h-full w-full p-5">
       <Image
-        src={"/Euro.svg"}
+        src={"/assets/svgs/Euro.svg"}
         alt="sdf"
         width={300}
         height={300}

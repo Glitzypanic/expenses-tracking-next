@@ -9,34 +9,34 @@ export default function SideNav() {
     {
       href: "/dashboard",
       label: "Dashboard",
-      icon: "/Dashboard-w.svg",
-      activeIcon: "/Dashboard.svg",
+      icon: "/assets/svgs/Dashboard-w.svg",
+      activeIcon: "/assets/svgs/Dashboard.svg",
     },
     {
       href: "/dashboard/payments",
       label: "Payments",
-      icon: "/Transaction-w.svg",
-      activeIcon: "/Transaction.svg",
+      icon: "/assets/svgs/Transaction-w.svg",
+      activeIcon: "/assets/svgs/Transaction.svg",
     },
     {
       href: "/dashboard/savings",
       label: "Savings",
-      icon: "/Save-w.svg",
-      activeIcon: "/Savings.svg",
+      icon: "/assets/svgs/Save-w.svg",
+      activeIcon: "/assets/svgs/Savings.svg",
     },
     {
       href: "/dashboard/reports",
       label: "Reports",
-      icon: "/Report-w.svg",
-      activeIcon: "/Report.svg",
+      icon: "/assets/svgs/Report-w.svg",
+      activeIcon: "/assets/svgs/Report.svg",
     },
   ];
 
   const settingsItem = {
     href: "/dashboard/settings",
     label: "Settings",
-    icon: "/Settings-w.svg",
-    activeIcon: "/Settings.svg",
+    icon: "/assets/svgs/Settings-w.svg",
+    activeIcon: "/assets/svgs/Settings.svg",
   };
 
   return (

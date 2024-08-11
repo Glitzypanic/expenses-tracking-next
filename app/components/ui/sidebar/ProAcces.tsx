@@ -12,7 +12,7 @@ export default function ProAccess() {
       <div className="flex flex-col items-center justify-center mt-2">
         <button className="inline-flex gap-2 bg-[#0A0A0A] text-white py-2 font-medium px-6 rounded-lg">
           <Image
-            src={"/Sparkling.svg"}
+            src={"/assets/svgs/Sparkling.svg"}
             alt="Sparkling icon"
             width={20}
             height={20}

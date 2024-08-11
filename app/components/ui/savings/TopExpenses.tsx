@@ -9,7 +9,7 @@ export default function TopExpenses() {
           <span className="text-[#CCFF00]">$</span>7,400
         </h3>
         <Image
-          src={"/Banknotes.svg"}
+          src={"/assets/svgs/Banknotes.svg"}
           alt="Money icon"
           width={220}
           height={220}

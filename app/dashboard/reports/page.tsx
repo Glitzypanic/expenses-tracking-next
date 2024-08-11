@@ -36,7 +36,7 @@ export default function ReportsPage() {
           </div>
           <div className="bg-[#307A4F] h-[493px] mt-5 rounded-lg flex flex-col justify-center items-center">
             <Image
-              src={"/Business-Report.svg"}
+              src={"/assets/svgs/Business-Report.svg"}
               alt="Report icon"
               width={300}
               height={300}
