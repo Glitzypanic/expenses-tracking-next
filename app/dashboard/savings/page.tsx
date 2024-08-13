@@ -1,10 +1,10 @@
-import { Calendar } from "@nextui-org/react";
-import CurrGoal from "@/app/components/ui/savings/CurrGoal";
-import NewGoal from "@/app/components/ui/savings/NewGoal";
-import PieChart from "../../components/ui/dashboard/PieChart";
+import Goals from "@/app/components/ui/goals/Goals";
+import CurrGoal from "@/app/components/ui/goals/CurrGoal";
+import AddFunds from "@/app/components/ui/goals/AddFunds";
+import PieChart from "../../components/ui/charts/PieChart";
 import SavingCalc from "@/app/components/ui/savings/SavingCalc";
-import Tips from "@/app/components/ui/savings/Tips";
-import TopExpenses from "@/app/components/ui/savings/TopExpenses";
+import Tips from "@/app/components/ui/common/Tips";
+import Balance from "@/app/components/ui/savings/Balance";
 
 export default function ExpensesPage() {
   return (
@@ -15,20 +15,21 @@ export default function ExpensesPage() {
           <PieChart />
         </div>
         <div className="flex flex-col justify-between">
-          <SavingCalc />
+          <AddFunds />
           <CurrGoal />
-          <NewGoal />
+          <SavingCalc />
         </div>
         <div className="">
           <Tips />
         </div>
       </section>
       <section className="flex mt-5">
-        <div className="mr-5 bg-[#0A0A0A] w-full p-5 rounded-lg">
-          <TopExpenses />
+        <div className="mr-5 bg-[#0A0A0A] w-fit p-5 rounded-lg">
+          <Balance />
         </div>
-        <div className="rounded-lg p-5 bg-[#0A0A0A] w-fit">
-          <Calendar
+        <div className="rounded-lg p-5 bg-[#0A0A0A] w-[900px]">
+          <Goals />
+          {/* <Calendar
             aria-label="Date (Visible Month)"
             visibleMonths={3}
             classNames={{
@@ -36,7 +37,7 @@ export default function ExpensesPage() {
               base: "shadow-none",
               gridWrapper: "bg-[#0A0A0A]",
             }}
-          />
+          /> */}
         </div>
       </section>
     </div>
