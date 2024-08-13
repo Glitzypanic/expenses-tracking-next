@@ -1,9 +1,9 @@
 import CardOverview from "../components/ui/dashboard/CardOverview";
-import LineChart from "../components/ui/dashboard/LineChart";
-import PieChart from "../components/ui/dashboard/PieChart";
-import SavingGoal from "../components/ui/dashboard/SavingGoal";
-import TableDaily from "../components/ui/dashboard/TableDaily";
-import Upcoming from "../components/ui/dashboard/Upcoming";
+import LineChart from "../components/ui/charts/LineChart";
+import PieChart from "../components/ui/charts/PieChart";
+import SavingGoal from "../components/ui/goals/SavingGoal";
+import TableDaily from "../components/ui/tables/TableDaily";
+import GoalsResume from "../components/ui/goals/GoalsResume";
 
 export default function Page() {
   return (
@@ -50,7 +50,7 @@ export default function Page() {
       <aside className="w-[525px]">
         <PieChart />
         <SavingGoal />
-        <Upcoming />
+        <GoalsResume />
       </aside>
     </main>
   );
