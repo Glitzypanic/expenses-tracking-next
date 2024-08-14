@@ -1,4 +1,4 @@
-import { generateData, User } from "@/lib/utils/generateData";
+import { generateData, User } from "@/app/lib/utils/generateData";
 import { Pagination } from "@nextui-org/pagination";
 import clsx from "clsx";
 
