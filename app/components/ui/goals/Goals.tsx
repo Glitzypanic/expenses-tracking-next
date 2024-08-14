@@ -1,4 +1,4 @@
-import { goalData } from "@/lib/utils/GoalData";
+import { goalData } from "@/app/lib/utils/GoalData";
 import { Progress } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";

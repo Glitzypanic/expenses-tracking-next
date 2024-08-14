@@ -1,4 +1,4 @@
-import { goalData } from "@/lib/utils/GoalData";
+import { goalData } from "@/app/lib/utils/GoalData";
 
 const CurrGoal = () => {
   return (
@@ -23,13 +23,13 @@ const CurrGoal = () => {
 
         <input
           aria-label="Enter amount"
-          type="text"
+          type="number"
           className="p-2 rounded-lg focus:outline-[#CCFF00]"
-          placeholder="Mount"
+          placeholder="$0"
         />
         <button
           aria-label="button"
-          className="bg-white text-black hover:bg-[#CCFF00] w-fit px-5 py-2 ml-5 rounded-lg"
+          className="bg-white text-black hover:bg-[#CCFF00] w-fit px-5 py-2 ml-2 rounded-lg"
         >
           Add mount
         </button>
