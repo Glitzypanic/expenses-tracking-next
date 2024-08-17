@@ -1,4 +1,13 @@
+import Image from "next/image";
+import NavLink from "../sidebar/NavLinks";
+
 export default function Header() {
+  const settingsItem = {
+    href: "/dashboard/settings/profile",
+    icon: "/assets/svgs/Settings-w.svg",
+    activeIcon: "/assets/svgs/Settings.svg",
+  };
+
   return (
     <header className="flex justify-between items-center rounded-lg p-6 mx-5 mt-4 bg-[#0A0A0A]">
       <div className="flex flex-col">
@@ -7,11 +16,27 @@ export default function Header() {
           Hi Jose, here are your financial stats
         </h2>
       </div>
-      <input
-        type="text"
-        placeholder="Search"
-        className="rounded-lg p-2 border-none bg-[#1A1A1A] placeholder:text-[#9ca3af] focus:outline outline-[#CCFF00]"
-      />
+      <div className="flex gap-3">
+        <div className="flex gap-6">
+          <Image
+            src={"/assets/svgs/Notification.svg"}
+            alt="search"
+            width={25}
+            height={25}
+            className="cursor-pointer"
+          />
+          <NavLink item={settingsItem} />
+        </div>
+        <div>
+          <Image
+            src={"/assets/img/Jose.jpeg"}
+            alt="search"
+            width={60}
+            height={60}
+            className="rounded-full cursor-pointer"
+          />
+        </div>
+      </div>
     </header>
   );
 }

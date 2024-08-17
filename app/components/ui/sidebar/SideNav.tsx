@@ -32,13 +32,6 @@ export default function SideNav() {
     },
   ];
 
-  const settingsItem = {
-    href: "/dashboard/settings",
-    label: "Settings",
-    icon: "/assets/svgs/Settings-w.svg",
-    activeIcon: "/assets/svgs/Settings.svg",
-  };
-
   return (
     <nav className="w-64 absolute h-full flex flex-col bg-[#0A0A0A]">
       <header className="flex justify-center items-center gap-2 px-5 py-10">
@@ -57,12 +50,7 @@ export default function SideNav() {
             <NavLink key={item.href} item={item} />
           ))}
         </ul>
-        <div className="h-full flex items-end">
-          <ProAccess />
-        </div>
-        <ul className="flex flex-col mt-auto mb-5 gap-2 text-white px-5 text-lg">
-          <NavLink item={settingsItem} />
-        </ul>
+        <ProAccess />
       </div>
     </nav>
   );
