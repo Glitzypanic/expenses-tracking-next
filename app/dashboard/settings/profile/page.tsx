@@ -29,7 +29,7 @@ export default function Page() {
           Edit Profile
         </button>
       </section>
-      <section className="mt-10 border-2 rounded-lg p-5">
+      <section className="mt-5 border-2 rounded-lg p-5">
         <header className="flex justify-between items-center">
           <h3 className="text-2xl font-bold">Personal Information</h3>
           <button className="rounded-lg border-2 px-5 py-2 flex gap-2 hover:border-[#CCFF00]">
@@ -69,7 +69,7 @@ export default function Page() {
           </aside>
         </div>
       </section>
-      <section className="mt-10 border-2 rounded-lg p-5">
+      <section className="mt-5 border-2 rounded-lg p-5">
         <header className="flex justify-between items-center">
           <h3 className="text-2xl font-bold">Address</h3>
           <button className="rounded-lg border-2 px-5 py-2 flex gap-2 hover:border-[#CCFF00]">
