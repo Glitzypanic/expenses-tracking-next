@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="bg-[#0A0A0A] mt-5 p-5 rounded-lg h-fit w-[1271px]">
+    <main className="bg-[#0A0A0A] mt-5 p-5 rounded-lg h-fit w-[1070px]">
       <h2 className="text-2xl font-bold">My Profile</h2>
       <section className="flex justify-between mt-10 items-center border-2 rounded-lg p-5">
         <div className="flex gap-5 items-center">
