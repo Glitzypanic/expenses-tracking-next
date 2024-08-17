@@ -2,34 +2,54 @@ import React from "react";
 
 type PlanCardProps = {
   planType: string;
+  planDescription: string;
   price: number;
   features: string[];
   isBestOffer?: boolean;
+  isMonthly?: boolean;
+  isEnterprise?: boolean;
 };
 
 const PlanCard: React.FC<PlanCardProps> = ({
   planType,
+  planDescription,
   price,
   features,
   isBestOffer,
+  isMonthly,
+  isEnterprise,
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between p-6 rounded-lg shadow-lg text-[#0A0A0A] ${
-        isBestOffer ? "bg-blue-100 border-2 border-blue-500" : "bg-white"
+      className={`flex flex-col justify-between p-6 rounded-lg ${
+        isBestOffer
+          ? "bg-[#0A0A0A] border-2 border-[#CCFF00]"
+          : "bg-[#0A0A0A] border-2 border-white"
       }`}
     >
       <div>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-semibold">{planType}</h2>
-          {isBestOffer && (
-            <span className="px-2 py-1 text-xs font-medium text-white bg-blue-500 rounded-full">
-              Best offer
-            </span>
-          )}
+        <div className="flex flex-col justify-between mb-4">
+          <div className="flex justify-between items-center">
+            <h2 className="text-2xl font-semibold">{planType}</h2>
+            {isBestOffer && (
+              <span className="px-2 py-1 text-xs font-medium text-[#0A0A0A] bg-[#CCFF00] rounded-full">
+                Popular
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-gray-400 w-[200px] mb-5">
+            {planDescription}
+          </p>
         </div>
-        <p className="text-4xl font-bold">${price}</p>
-        <p className="text-sm text-gray-500">per month</p>
+        <p className="text-4xl font-bold">
+          ${price}
+          {isMonthly && (
+            <span className="text-gray-400 text-sm"> / Monthly</span>
+          )}
+          {isEnterprise && (
+            <span className="text-[#CCFF00] text-md"> Lets Talk</span>
+          )}
+        </p>
         <ul className="mt-4 space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center">
@@ -53,8 +73,8 @@ const PlanCard: React.FC<PlanCardProps> = ({
         </ul>
       </div>
       <button
-        className={`mt-6 px-4 py-2 text-white font-semibold rounded-lg ${
-          isBestOffer ? "bg-blue-600" : "bg-black"
+        className={`mt-6 px-4 py-2 font-semibold rounded-lg ${
+          isBestOffer ? "bg-[#CCFF00] text-[#0A0A0A]" : "bg-black text-white"
         } hover:opacity-90`}
       >
         Get Started
