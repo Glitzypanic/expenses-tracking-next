@@ -11,7 +11,7 @@ export default function Page() {
           features.
         </p>
       </header>
-      <section className="flex gap-10 mt-10 justify-center mb-10">
+      <section className="flex gap-5 mt-10 justify-center mb-10">
         <PlanCard
           planType="Basic"
           price={0}
