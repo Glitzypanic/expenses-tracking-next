@@ -12,7 +12,10 @@ export default function ProAccess() {
       </div>
       <div className="flex flex-col items-center justify-center mt-2">
         <Link href={"dashboard/settings/plans"}>
-          <button className="inline-flex gap-2 bg-[#0A0A0A] text-white py-2 font-medium px-6 rounded-lg">
+          <button
+            className="inline-flex gap-2 bg-[#0A0A0A] text-white py-2 font-medium px-6 rounded-lg"
+            aria-label="button"
+          >
             <Image
               src={"/assets/svgs/Sparkling.svg"}
               alt="Sparkling icon"

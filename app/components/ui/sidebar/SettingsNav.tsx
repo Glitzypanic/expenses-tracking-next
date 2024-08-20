@@ -26,7 +26,7 @@ export default function SettingsNav() {
   ];
 
   return (
-    <nav className="bg-[#0A0A0A] w-fit rounded-lg col-span-2 px-6 m-5 p-5">
+    <nav className="bg-[#0A0A0A] rounded-lg col-span-2 px-6 p-5">
       <h2 className="text-2xl font-bold mb-10">
         Update And Manage Your Account
       </h2>
@@ -36,7 +36,10 @@ export default function SettingsNav() {
         ))}
       </ul>
       <Link href={"/dashboard/settings/logout"}>
-        <button className="border-2 rounded-lg font-bold py-2 px-5 mt-24 w-full text-white hover:bg-red-500/10 hover:text-red-500 hover:border-red-500">
+        <button
+          className="border-2 rounded-lg font-bold py-2 px-5 mt-24 w-full text-white hover:bg-red-500/10 hover:text-red-500 hover:border-red-500"
+          aria-label="button"
+        >
           Logout
         </button>
       </Link>

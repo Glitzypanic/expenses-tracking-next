@@ -24,7 +24,7 @@ const SavingCalc = () => {
   }, [amountToSave, months]);
 
   return (
-    <div className="w-full h-fit bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
+    <div className="bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
       <h3 className="font-semibold text-2xl">Monthly installment calculator</h3>
       <label className="w-fit inline-flex gap-3 mt-3">
         <input

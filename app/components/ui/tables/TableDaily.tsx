@@ -5,14 +5,17 @@ import Link from "next/link";
 
 const TableDaily: React.FC = () => {
   return (
-    <section>
+    <section className="bg-[#0A0A0A] p-5 rounded-lg h-full">
       <div className="flex justify-between">
         <div>
           <h2 className="text-2xl font-bold">Daily Payments</h2>
           <span className="text-[#9ca3af]">Data from 1-12 Apr, 2024</span>
         </div>
         <Link href="/dashboard/payments">
-          <button className="h-fit border-2 rounded-lg p-2 hover:border-[#CCFF00]">
+          <button
+            className="h-fit border-2 rounded-lg p-2 hover:border-[#CCFF00]"
+            aria-label="button"
+          >
             See all
           </button>
         </Link>

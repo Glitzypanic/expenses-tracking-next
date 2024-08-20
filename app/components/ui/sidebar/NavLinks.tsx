@@ -24,7 +24,7 @@ export default function NavLink({ item }: { item: any }) {
     >
       <Image
         src={pathname === item.href || isHovered ? item.activeIcon : item.icon}
-        alt=""
+        alt="icons"
         width={25}
         height={25}
       />
