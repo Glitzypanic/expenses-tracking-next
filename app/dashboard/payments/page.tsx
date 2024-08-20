@@ -5,10 +5,13 @@ import clsx from "clsx";
 const PaymentsPage = () => {
   const users: User[] = generateData(15);
   return (
-    <div className="bg-[#0A0A0A] rounded-lg col-span-2 px-6 h-full m-5">
+    <div className="bg-[#0A0A0A] rounded-lg p-5 mb-5">
       <div className="flex justify-between py-6">
         <h2 className="text-3xl font-bold">Transactions</h2>
-        <button className="border border-white px-4 rounded-lg hover:border-[#CCFF00]">
+        <button
+          className="border border-white px-4 rounded-lg hover:border-[#CCFF00]"
+          aria-label="Button"
+        >
           + Create payment
         </button>
       </div>
