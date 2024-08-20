@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="bg-[#0A0A0A] mt-5 p-5 rounded-lg h-fit w-[1250px]">
+    <main className="bg-[#0A0A0A] p-5 rounded-lg mb-5">
       <h2 className="text-2xl font-bold">My Profile</h2>
       <section className="flex justify-between mt-10 items-center border-2 rounded-lg p-5">
         <div className="flex gap-5 items-center">
@@ -72,7 +72,10 @@ export default function Page() {
       <section className="mt-5 border-2 rounded-lg p-5">
         <header className="flex justify-between items-center">
           <h3 className="text-2xl font-bold">Address</h3>
-          <button className="rounded-lg border-2 px-5 py-2 flex gap-2 hover:border-[#CCFF00]">
+          <button
+            className="rounded-lg border-2 px-5 py-2 flex gap-2 hover:border-[#CCFF00]"
+            aria-label="Edit icon button"
+          >
             <Image
               src="/assets/svgs/Pencil.svg"
               alt="pencil"
