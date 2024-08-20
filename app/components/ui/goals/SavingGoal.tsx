@@ -2,7 +2,7 @@ import { Progress } from "@nextui-org/progress";
 
 export default function SavingGoal() {
   return (
-    <section className="flex flex-col gap-10 rounded-lg w-full bg-[#0A0A0A] h-fit p-5 mt-4">
+    <section className="flex flex-col gap-10 rounded-lg w-full bg-[#0A0A0A] h-fit p-5">
       <div className="flex justify-between">
         <div className="block">
           <h2 className="text-2xl font-bold">Saving Goals</h2>

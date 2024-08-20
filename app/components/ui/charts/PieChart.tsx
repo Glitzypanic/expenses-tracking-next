@@ -58,7 +58,7 @@ export default function Component() {
   }, []);
 
   return (
-    <Card className="flex flex-col dark border-none w-full h-[382px]">
+    <Card className="flex flex-col dark border-none">
       <CardHeader className="items-center pb-0">
         <CardTitle>Summary</CardTitle>
         <CardDescription>January - June 2024</CardDescription>

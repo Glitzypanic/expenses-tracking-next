@@ -76,6 +76,7 @@ const PlanCard: React.FC<PlanCardProps> = ({
         className={`mt-6 px-4 py-2 font-semibold rounded-lg ${
           isBestOffer ? "bg-[#CCFF00] text-[#0A0A0A]" : "bg-black text-white"
         } hover:opacity-90`}
+        aria-label="button"
       >
         Get Started
       </button>

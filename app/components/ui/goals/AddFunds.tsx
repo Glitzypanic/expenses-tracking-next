@@ -29,7 +29,7 @@ const AddFunds = () => {
   };
 
   return (
-    <div className="w-[800px] h-fit bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
+    <div className="bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
       <h3 className="font-semibold text-2xl">Add funds</h3>
       <div>
         <form onSubmit={handleSubmit} className="mt-3">
@@ -57,7 +57,7 @@ const AddFunds = () => {
             <button
               type="submit"
               aria-label="Add funds"
-              className="bg-white text-black hover:bg-[#CCFF00] w-fit px-10 py-2 rounded-lg"
+              className="bg-white text-black hover:bg-[#CCFF00] px-10 rounded-lg"
             >
               Add
             </button>

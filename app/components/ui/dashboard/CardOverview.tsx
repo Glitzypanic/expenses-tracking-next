@@ -11,10 +11,10 @@ export default function CardOverview({
 }) {
   return (
     <article>
-      <div className="bg-[#0A0A0A] w-[310px] h-[181px] rounded-lg p-5 justify-between flex flex-col">
+      <div className="bg-[#0A0A0A] rounded-lg p-5 flex flex-col">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <div className="flex items-center gap-5">
-          <span className="text-5xl">
+        <div className="flex items-center gap-10">
+          <span className="text-5xl mt-5">
             <span className="text-[#CCFF00]">$</span>
             {value}
           </span>

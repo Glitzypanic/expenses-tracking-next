@@ -2,7 +2,7 @@ import { goalData } from "@/app/lib/utils/GoalData";
 
 const CurrGoal = () => {
   return (
-    <div className="w-full h-fit bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
+    <div className="bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
       <h3 className="font-semibold text-2xl">Add saving to current goal</h3>
       <label className="w-fit inline-flex gap-3 mt-3">
         <select
@@ -29,7 +29,7 @@ const CurrGoal = () => {
         />
         <button
           aria-label="button"
-          className="bg-white text-black hover:bg-[#CCFF00] w-fit px-5 py-2 ml-2 rounded-lg"
+          className="bg-white text-black hover:bg-[#CCFF00] px-4 rounded-lg"
         >
           Add mount
         </button>

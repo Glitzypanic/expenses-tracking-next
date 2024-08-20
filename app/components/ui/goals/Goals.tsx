@@ -5,13 +5,16 @@ import Link from "next/link";
 
 const Upcoming: React.FC = () => {
   return (
-    <section className="flex flex-col gap-4 rounded-lg bg-[#0A0A0A] h-[300px]">
+    <section className="flex flex-col gap-4 w-full rounded-lg bg-[#0A0A0A]">
       {/* header */}
       <div className="flex justify-between">
         <h2 className="text-3xl font-bold">My planning</h2>
         <div>
           <Link href="/dashboard/savings">
-            <button className="h-fit border-2 inline-flex items-center gap-2 rounded-lg p-2 hover:border-[#CCFF00]">
+            <button
+              className="h-fit border-2 inline-flex items-center gap-2 rounded-lg p-2 hover:border-[#CCFF00]"
+              aria-label="button"
+            >
               <Image
                 src="/assets/svgs/Add.svg"
                 alt="Plus icon"
