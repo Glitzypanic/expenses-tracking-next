@@ -23,8 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="A simple expense tracker" />
       </head>
