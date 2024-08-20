@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
       <section className="flex w-full flex-col">
         <Header />
-        <div>{children}</div>
+        <div className="mx-5">{children}</div>
       </section>
     </div>
   );

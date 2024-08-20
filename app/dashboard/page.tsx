@@ -4,54 +4,39 @@ import PieChart from "../components/ui/charts/PieChart";
 import SavingGoal from "../components/ui/goals/SavingGoal";
 import TableDaily from "../components/ui/tables/TableDaily";
 import GoalsResume from "../components/ui/goals/GoalsResume";
+import AreaChart from "../components/ui/charts/AreaChart";
 
 export default function Page() {
   return (
-    <main className="bg-[#1A1A1A] flex m-5 h-full">
-      <section className="flex-grow grid grid-cols-[1fr,auto] mr-5">
-        <div className="grid grid-cols-[1fr,auto] h-fit">
-          <div>
-            <LineChart />
-          </div>
-
-          <div className="grid grid-cols-2 gap-x-3 gap-y-5 h-fit">
-            <CardOverview
-              title={"Total Balance"}
-              value={"7,400"}
-              percentage={" 5,4%"}
-              description={"last month"}
-            />
-            <CardOverview
-              title={"Monthly Expenses"}
-              value={"10,400"}
-              percentage={" 10%"}
-              description={"last month"}
-            />
-            <CardOverview
-              title={"Remaining Budget"}
-              value={"15,000"}
-              percentage={" 15%"}
-              description={"used budget"}
-            />
-            <CardOverview
-              title={"Savings"}
-              value={"15,000"}
-              percentage={" 15%"}
-              description={"last month"}
-            />
-          </div>
-
-          <div className="bg-[#0A0A0A] rounded-lg col-span-2 mt-4 p-5 h-full">
-            <TableDaily />
-          </div>
-        </div>
+    <main className="bg-[#1A1A1A] flex w-full flex-col gap-5">
+      <section className="flex gap-5 w-full">
+        <CardOverview
+          title={"Total Balance"}
+          value={"7,400"}
+          percentage={" 5,4%"}
+          description={"last month"}
+        />
+        <CardOverview
+          title={"Monthly Expenses"}
+          value={"1,400"}
+          percentage={" 10%"}
+          description={"last month"}
+        />
       </section>
 
-      <aside className="w-[525px]">
-        <PieChart />
-        <SavingGoal />
-        <GoalsResume />
-      </aside>
+      <section className="">
+        <AreaChart />
+      </section>
+
+      <div className="flex md:flex-col lg:flex-row gap-5 mb-5">
+        <section className="w-full">
+          <TableDaily />
+        </section>
+        <aside className="flex flex-col w-full gap-5">
+          <SavingGoal />
+          <GoalsResume />
+        </aside>
+      </div>
     </main>
   );
 }
