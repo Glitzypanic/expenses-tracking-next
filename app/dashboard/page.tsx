@@ -9,20 +9,9 @@ import AreaChart from "../components/ui/charts/AreaChart";
 export default function Page() {
   return (
     <main className="bg-[#1A1A1A] flex w-full flex-col gap-5">
-      <section className="flex gap-5 w-full">
-        <CardOverview
-          title={"Total Balance"}
-          value={"7,400"}
-          percentage={" 5,4%"}
-          description={"last month"}
-        />
-        <CardOverview
-          title={"Monthly Expenses"}
-          value={"1,400"}
-          percentage={" 10%"}
-          description={"last month"}
-        />
-      </section>
+      {/* <section className="flex gap-5 w-full">
+        <CardOverview />
+      </section> */}
 
       <section className="">
         <AreaChart />
