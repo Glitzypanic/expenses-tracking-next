@@ -39,7 +39,7 @@ export default function ReportsPage() {
             Download yearly report
           </button>
         </div>
-        <div className="bg-[#307A4F] p-5 w-full mt-5 rounded-lg flex flex-col justify-center items-center">
+        <div className="bg-[#307A4F] p-5 mt-5 rounded-lg flex flex-col justify-center items-center">
           <Image
             src={"/assets/svgs/Business-Report.svg"}
             alt="Report icon"
