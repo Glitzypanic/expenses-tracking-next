@@ -37,7 +37,7 @@ export default function SideNav() {
       <header className="flex justify-center items-center gap-2 px-5 py-10">
         <Image
           className="rounded-lg"
-          src="/img/Logo-xs.png"
+          src="/assets/img/Logo-xs.png"
           width={40}
           height={40}
           alt="Company logo"

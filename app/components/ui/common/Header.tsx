@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavLink from "../sidebar/NavLinks";
+import NavLink from "../sidenav/NavLinks";
 
 export default function Header() {
   const settingsItem = {

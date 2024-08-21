@@ -1,4 +1,4 @@
-import SideNav from "../components/ui/sidebar/SideNav";
+import SideNav from "../components/ui/sidenav/SideNav";
 import Header from "../components/ui/common/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

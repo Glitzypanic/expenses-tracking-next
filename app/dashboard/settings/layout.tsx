@@ -1,4 +1,4 @@
-import SettingsNav from "@/app/components/ui/sidebar/SettingsNav";
+import SettingsNav from "@/app/components/ui/sidenav/SettingsNav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
