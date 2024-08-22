@@ -13,7 +13,7 @@ export default function Header() {
       <div className="flex flex-col">
         <h1 className="text-3xl font-bold">Dashboard</h1>
         <h2 className="text-[#9ca3af]">
-          Hi Jose, here are your financial stats
+          Hi Damian, here are your financial stats
         </h2>
       </div>
       <div className="flex gap-3">
@@ -29,7 +29,7 @@ export default function Header() {
         </div>
         <div>
           <Image
-            src={"/assets/img/Jose.jpeg"}
+            src={"/assets/img/Damian.jpg"}
             alt="search"
             width={60}
             height={60}
