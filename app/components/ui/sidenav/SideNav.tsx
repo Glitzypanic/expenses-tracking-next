@@ -46,9 +46,11 @@ export default function SideNav() {
       </header>
       <div className="flex flex-col flex-grow justify-between">
         <ul className="flex flex-col mt-5 gap-2 text-white px-5 text-lg">
-          {navItems.map((item) => (
-            <NavLink key={item.href} item={item} />
-          ))}
+          <li>
+            {navItems.map((item) => (
+              <NavLink key={item.href} item={item} />
+            ))}
+          </li>
         </ul>
         <ProAccess />
       </div>

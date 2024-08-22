@@ -31,9 +31,11 @@ export default function SettingsNav() {
         Update And Manage Your Account
       </h2>
       <ul className="flex flex-col gap-2 w-full text-white text-lg">
-        {navLinks.map((item) => (
-          <NavLink key={item.href} item={item} />
-        ))}
+        <li>
+          {navLinks.map((item) => (
+            <NavLink key={item.href} item={item} />
+          ))}
+        </li>
       </ul>
       <Link href={"/dashboard/settings/logout"}>
         <button
