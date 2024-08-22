@@ -23,10 +23,18 @@ const TableDaily: React.FC = () => {
       <table className="min-w-full text-left mt-7 mb-[26px]">
         <thead className="border border-white">
           <tr>
-            <th className="py-3 px-4">Order</th>
-            <th className="py-3 px-4">Amount</th>
-            <th className="py-3 px-4">Date</th>
-            <th className="py-3">Status</th>
+            <th className="py-3 px-4" role="columnheader">
+              Order
+            </th>
+            <th className="py-3 px-4" role="columnheader">
+              Amount
+            </th>
+            <th className="py-3 px-4" role="columnheader">
+              Date
+            </th>
+            <th className="py-3" role="columnheader">
+              Status
+            </th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
@@ -38,8 +46,8 @@ const TableDaily: React.FC = () => {
               <div className="py-2">
                 <th
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
-                    "bg-[#c4f9e4]  text-[#28895e]": data.status === "Paid",
-                    "bg-[#dfd3ff] text-[#7d62ca]": data.status === "Unpaid",
+                    "bg-[#326747]  text-white": data.status === "Paid",
+                    "bg-[#66338b] text-white": data.status === "Unpaid",
                   })}
                 >
                   {data.status}

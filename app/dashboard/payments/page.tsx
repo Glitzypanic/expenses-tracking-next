@@ -35,8 +35,8 @@ const PaymentsPage = () => {
               <div className="py-2">
                 <td
                   className={clsx("rounded-lg flex w-fit px-3 font-medium", {
-                    "bg-[#c4f9e4]  text-[#28895e]": user.status === "Paid",
-                    "bg-[#dfd3ff] text-[#7d62ca]": user.status === "Unpaid",
+                    "bg-[#326747]  text-white": user.status === "Paid",
+                    "bg-[#66338b] text-white": user.status === "Unpaid",
                   })}
                 >
                   {user.status}
@@ -52,6 +52,7 @@ const PaymentsPage = () => {
           initialPage={1}
           classNames={{ cursor: "bg-[#CCFF00]" }}
           showControls
+          aria-label="pagination"
         />
       </div>
     </div>
