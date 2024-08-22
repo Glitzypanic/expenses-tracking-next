@@ -7,16 +7,16 @@ export default function Page() {
       <section className="flex justify-between mt-10 items-center border-2 rounded-lg p-5">
         <div className="flex gap-5 items-center">
           <Image
-            src="/assets/img/Jose.jpeg"
+            src="/assets/img/Damian.jpg"
             alt="avatar"
             width={100}
             height={100}
             className="rounded-full"
           />
           <div>
-            <h3 className="text-2xl font-semibold">Jose Farias</h3>
+            <h3 className="text-2xl font-semibold">Damian Russel</h3>
             <p className="text-gray-200">Frontend Developer</p>
-            <span className="text-gray-400">Quilpue, Chile</span>
+            <span className="text-gray-400">Paris, France</span>
           </div>
         </div>
         <button className="rounded-lg border-2 px-5 py-2 flex gap-2 hover:border-[#CCFF00]">
@@ -46,11 +46,11 @@ export default function Page() {
           <aside className="flex flex-col gap-5">
             <div>
               <h4 className="text-gray-200 font-semibold">First Name</h4>
-              <p className="">José</p>
+              <p className="">Damian</p>
             </div>
             <div>
               <h4 className="text-gray-200 font-semibold">Email Address</h4>
-              <p className="">jose.fariasdv@gmail.com</p>
+              <p className="">damian.rudev@gmail.com</p>
             </div>
             <div>
               <h4 className="text-gray-200 font-semibold">Bio</h4>
@@ -60,7 +60,7 @@ export default function Page() {
           <aside className="flex flex-col gap-5">
             <div>
               <h4 className="text-gray-200 font-semibold">Last Name</h4>
-              <p className="">Farias</p>
+              <p className="">Russel</p>
             </div>
             <div>
               <h4 className="text-gray-200 font-semibold">Phone Number</h4>
@@ -89,7 +89,7 @@ export default function Page() {
           <aside className="flex flex-col gap-5">
             <div>
               <h4 className="text-gray-200 font-semibold">Country</h4>
-              <p className="">Chile</p>
+              <p className="">France</p>
             </div>
             <div>
               <h4 className="text-gray-200 font-semibold">Postal Code</h4>
@@ -99,11 +99,11 @@ export default function Page() {
           <aside className="flex flex-col gap-5">
             <div>
               <h4 className="text-gray-200 font-semibold">City/State</h4>
-              <p className="">Quilpué, Valparaiso</p>
+              <p className="">Paris, France</p>
             </div>
             <div>
               <h4 className="text-gray-200 font-semibold">Street Address</h4>
-              <p className="">Calle 123, Piso 1</p>
+              <p className="">Street 123</p>
             </div>
           </aside>
         </div>
