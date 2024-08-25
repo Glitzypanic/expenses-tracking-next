@@ -45,8 +45,8 @@ export default function SideNav() {
         <span className="text-3xl font-bold text-[#F5F5F5]">GTracking</span>
       </header>
       <div className="flex flex-col flex-grow justify-between">
-        <ul className="flex flex-col mt-5 gap-2 text-white px-5 text-lg">
-          <li>
+        <ul className="mt-5 text-white px-5 text-lg">
+          <li className="flex flex-col gap-2">
             {navItems.map((item) => (
               <NavLink key={item.href} item={item} />
             ))}

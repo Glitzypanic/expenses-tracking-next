@@ -30,8 +30,8 @@ export default function SettingsNav() {
       <h2 className="text-2xl font-bold mb-10">
         Update And Manage Your Account
       </h2>
-      <ul className="flex flex-col gap-2 w-full text-white text-lg">
-        <li>
+      <ul className="w-full text-white text-lg">
+        <li className="flex flex-col gap-2 ">
           {navLinks.map((item) => (
             <NavLink key={item.href} item={item} />
           ))}
