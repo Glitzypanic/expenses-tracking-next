@@ -2,28 +2,41 @@ import { goalData } from "@/app/lib/utils/GoalData";
 import { Progress } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import GoalModal from "../modals/GoalModal";
 
-const Upcoming: React.FC = () => {
+type SearchParamProps = {
+  searchParam: Record<string, string> | undefined | null;
+  showLink?: boolean;
+};
+
+export default function Goals({
+  searchParam,
+  showLink = true,
+}: SearchParamProps) {
+  const show = searchParam?.show;
+
   return (
-    <section className="flex flex-col gap-4 w-full rounded-lg bg-[#0A0A0A]">
-      {/* header */}
+    <section className="flex flex-col gap-4 p-5 w-full rounded-lg bg-[#0A0A0A] h-full">
       <div className="flex justify-between">
         <h2 className="text-3xl font-bold">My planning</h2>
         <div>
-          <Link href="/dashboard/savings">
-            <button
-              className="h-fit border-2 inline-flex items-center gap-2 rounded-lg p-2 hover:border-[#CCFF00]"
-              aria-label="button"
-            >
-              <Image
-                src="/assets/svgs/Add.svg"
-                alt="Plus icon"
-                width={30}
-                height={30}
-              />
-              Add new goal
-            </button>
-          </Link>
+          {showLink && (
+            <Link href="/dashboard/savings?show=true">
+              <button
+                className="h-fit border-2 inline-flex items-center gap-2 rounded-lg p-2 hover:border-[#CCFF00]"
+                aria-label="button"
+              >
+                <Image
+                  src="/assets/svgs/Add.svg"
+                  alt="Plus icon"
+                  width={30}
+                  height={30}
+                />
+                Add new goal
+              </button>
+            </Link>
+          )}
+          {show && <GoalModal />}
         </div>
       </div>
 
@@ -53,6 +66,4 @@ const Upcoming: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Upcoming;
+}
