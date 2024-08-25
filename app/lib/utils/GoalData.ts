@@ -6,7 +6,7 @@ export const goalData: GoalData[] = [
     name: "House",
     goal: "500",
     actual: "400",
-    progress: 40,
+    progress: 20,
     svg: "/assets/svgs/Home.svg",
     alt: "House icon",
   },
