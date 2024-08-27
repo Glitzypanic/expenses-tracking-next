@@ -8,7 +8,7 @@ const TableDaily: React.FC = () => {
     <section className="bg-[#0A0A0A] p-5 rounded-lg h-full">
       <div className="flex justify-between">
         <div>
-          <h2 className="text-2xl font-bold">Daily Payments</h2>
+          <h2 className="text-2xl font-bold">Payments</h2>
           <span className="text-[#9ca3af]">Data from 1-12 Apr, 2024</span>
         </div>
         <Link href="/dashboard/payments">
@@ -43,16 +43,17 @@ const TableDaily: React.FC = () => {
               <th className="py-2 px-4">{data.order}</th>
               <th className="py-2 px-4">{data.amount}</th>
               <th className="py-2 px-4">{data.date}</th>
-              <div className="py-2">
-                <th
-                  className={clsx("rounded-lg flex w-fit px-3 font-medium", {
+              <th
+                className={clsx(
+                  "rounded-lg flex w-20 justify-center px-3 my-2 font-medium",
+                  {
                     "bg-[#326747]  text-white": data.status === "Paid",
                     "bg-[#66338b] text-white": data.status === "Unpaid",
-                  })}
-                >
-                  {data.status}
-                </th>
-              </div>
+                  }
+                )}
+              >
+                {data.status}
+              </th>
             </tr>
           ))}
         </tbody>
