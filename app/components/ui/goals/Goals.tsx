@@ -1,7 +1,6 @@
 "use client";
 
-// import { goalData } from "@/app/lib/utils/GoalData";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Progress } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,8 +19,36 @@ export default function Goals({
 
   const [goals, setGoals] = useState<any[]>([]);
 
+  // Cargar los objetivos desde localStorage al montar el componente
+  useEffect(() => {
+    const savedGoals = localStorage.getItem("goals");
+    if (savedGoals) {
+      try {
+        const parsedGoals = JSON.parse(savedGoals);
+        setGoals(parsedGoals);
+        console.log("Goals cargados:", parsedGoals); // Depuración
+      } catch (error) {
+        console.error("Error al parsear los goals:", error);
+      }
+    }
+  }, []);
+
+  // Guardar los objetivos en localStorage cada vez que cambien
+  useEffect(() => {
+    try {
+      localStorage.setItem("goals", JSON.stringify(goals));
+      console.log("Goals guardados:", goals); // Depuración
+    } catch (error) {
+      console.error("Error al guardar los goals:", error);
+    }
+  }, [goals]);
+
   const handleNewGoal = (data: any) => {
-    setGoals((prevGoals) => [...prevGoals, data]);
+    setGoals((prevGoals) => {
+      const newGoals = [...prevGoals, data];
+      console.log("Nuevo goal añadido:", newGoals); // Depuración
+      return newGoals;
+    });
   };
 
   return (
@@ -53,18 +80,15 @@ export default function Goals({
       <div className="flex flex-col gap-5 pr-2 overflow-y-scroll">
         {goals.map((goal, index) => (
           <div className="flex gap-5" key={index}>
-            {/* <div className="bg-white rounded-lg p-1">
-              <Image src={data.svg} alt={data.alt} width={40} height={40} />
-            </div> */}
             <div className="flex flex-col w-full justify-between gap-2">
               <div className="flex justify-between items-end">
                 <h3 className="text-lg font-bold">{goal.goal}</h3>
                 <p className="text-[#9ca3af] text-xs font-bold">
-                  <span>${goal.total}/</span>${goal.initialAmount}
+                  <span>${goal.initialAmount}/</span>${goal.total}
                 </p>
               </div>
               <Progress
-                value={40}
+                value={(Number(goal.initialAmount) / Number(goal.total)) * 100}
                 classNames={{
                   indicator: "bg-[#CCFF00]",
                 }}
