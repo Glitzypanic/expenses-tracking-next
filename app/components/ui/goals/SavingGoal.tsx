@@ -5,7 +5,7 @@ export default function SavingGoal() {
     <section className="flex flex-col gap-10 rounded-lg w-full bg-[#0A0A0A] h-fit p-5">
       <div className="flex justify-between">
         <div className="block">
-          <h2 className="text-2xl font-bold">Saving Goals</h2>
+          <h2 className="text-2xl font-bold">Saving Goal</h2>
           <span className="text-[#9ca3af]">68% Progress</span>
         </div>
       </div>
