@@ -7,7 +7,7 @@ const PaymentsPage = () => {
   return (
     <div className="bg-[#0A0A0A] rounded-lg p-5 mb-5">
       <div className="flex justify-between py-6">
-        <h2 className="text-3xl font-bold">Transactions</h2>
+        <h2 className="text-3xl font-bold">Payments</h2>
         <button
           className="border border-white px-4 rounded-lg hover:border-[#CCFF00]"
           aria-label="Button"
@@ -32,16 +32,17 @@ const PaymentsPage = () => {
               <td className="py-2 px-4">{user.order}</td>
               <td className="py-2 px-4">$ {user.amount}</td>
               <td className="py-2 px-4">{user.date}</td>
-              <div className="py-2">
-                <td
-                  className={clsx("rounded-lg flex w-fit px-3 font-medium", {
+              <td
+                className={clsx(
+                  "rounded-lg flex w-20 justify-center px-3 my-2 font-medium",
+                  {
                     "bg-[#326747]  text-white": user.status === "Paid",
                     "bg-[#66338b] text-white": user.status === "Unpaid",
-                  })}
-                >
-                  {user.status}
-                </td>
-              </div>
+                  }
+                )}
+              >
+                {user.status}
+              </td>
             </tr>
           ))}
         </tbody>
