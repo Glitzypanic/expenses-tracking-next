@@ -26,109 +26,109 @@ import {
   SelectValue,
 } from "@/app/providers/components/select";
 const chartData = [
-  { date: "2024-04-01", desktop: 222, mobile: 150 },
-  { date: "2024-04-02", desktop: 97, mobile: 180 },
-  { date: "2024-04-03", desktop: 167, mobile: 120 },
-  { date: "2024-04-04", desktop: 242, mobile: 260 },
-  { date: "2024-04-05", desktop: 373, mobile: 290 },
-  { date: "2024-04-06", desktop: 301, mobile: 340 },
-  { date: "2024-04-07", desktop: 245, mobile: 180 },
-  { date: "2024-04-08", desktop: 409, mobile: 320 },
-  { date: "2024-04-09", desktop: 59, mobile: 110 },
-  { date: "2024-04-10", desktop: 261, mobile: 190 },
-  { date: "2024-04-11", desktop: 327, mobile: 350 },
-  { date: "2024-04-12", desktop: 292, mobile: 210 },
-  { date: "2024-04-13", desktop: 342, mobile: 380 },
-  { date: "2024-04-14", desktop: 137, mobile: 220 },
-  { date: "2024-04-15", desktop: 120, mobile: 170 },
-  { date: "2024-04-16", desktop: 138, mobile: 190 },
-  { date: "2024-04-17", desktop: 446, mobile: 360 },
-  { date: "2024-04-18", desktop: 364, mobile: 410 },
-  { date: "2024-04-19", desktop: 243, mobile: 180 },
-  { date: "2024-04-20", desktop: 89, mobile: 150 },
-  { date: "2024-04-21", desktop: 137, mobile: 200 },
-  { date: "2024-04-22", desktop: 224, mobile: 170 },
-  { date: "2024-04-23", desktop: 138, mobile: 230 },
-  { date: "2024-04-24", desktop: 387, mobile: 290 },
-  { date: "2024-04-25", desktop: 215, mobile: 250 },
-  { date: "2024-04-26", desktop: 75, mobile: 130 },
-  { date: "2024-04-27", desktop: 383, mobile: 420 },
-  { date: "2024-04-28", desktop: 122, mobile: 180 },
-  { date: "2024-04-29", desktop: 315, mobile: 240 },
-  { date: "2024-04-30", desktop: 454, mobile: 380 },
-  { date: "2024-05-01", desktop: 165, mobile: 220 },
-  { date: "2024-05-02", desktop: 293, mobile: 310 },
-  { date: "2024-05-03", desktop: 247, mobile: 190 },
-  { date: "2024-05-04", desktop: 385, mobile: 420 },
-  { date: "2024-05-05", desktop: 481, mobile: 390 },
-  { date: "2024-05-06", desktop: 498, mobile: 520 },
-  { date: "2024-05-07", desktop: 388, mobile: 300 },
-  { date: "2024-05-08", desktop: 149, mobile: 210 },
-  { date: "2024-05-09", desktop: 227, mobile: 180 },
-  { date: "2024-05-10", desktop: 293, mobile: 330 },
-  { date: "2024-05-11", desktop: 335, mobile: 270 },
-  { date: "2024-05-12", desktop: 197, mobile: 240 },
-  { date: "2024-05-13", desktop: 197, mobile: 160 },
-  { date: "2024-05-14", desktop: 448, mobile: 490 },
-  { date: "2024-05-15", desktop: 473, mobile: 380 },
-  { date: "2024-05-16", desktop: 338, mobile: 400 },
-  { date: "2024-05-17", desktop: 499, mobile: 420 },
-  { date: "2024-05-18", desktop: 315, mobile: 350 },
-  { date: "2024-05-19", desktop: 235, mobile: 180 },
-  { date: "2024-05-20", desktop: 177, mobile: 230 },
-  { date: "2024-05-21", desktop: 82, mobile: 140 },
-  { date: "2024-05-22", desktop: 81, mobile: 120 },
-  { date: "2024-05-23", desktop: 252, mobile: 290 },
-  { date: "2024-05-24", desktop: 294, mobile: 220 },
-  { date: "2024-05-25", desktop: 201, mobile: 250 },
-  { date: "2024-05-26", desktop: 213, mobile: 170 },
-  { date: "2024-05-27", desktop: 420, mobile: 460 },
-  { date: "2024-05-28", desktop: 233, mobile: 190 },
-  { date: "2024-05-29", desktop: 78, mobile: 130 },
-  { date: "2024-05-30", desktop: 340, mobile: 280 },
-  { date: "2024-05-31", desktop: 178, mobile: 230 },
-  { date: "2024-06-01", desktop: 178, mobile: 200 },
-  { date: "2024-06-02", desktop: 470, mobile: 410 },
-  { date: "2024-06-03", desktop: 103, mobile: 160 },
-  { date: "2024-06-04", desktop: 439, mobile: 380 },
-  { date: "2024-06-05", desktop: 88, mobile: 140 },
-  { date: "2024-06-06", desktop: 294, mobile: 250 },
-  { date: "2024-06-07", desktop: 323, mobile: 370 },
-  { date: "2024-06-08", desktop: 385, mobile: 320 },
-  { date: "2024-06-09", desktop: 438, mobile: 480 },
-  { date: "2024-06-10", desktop: 155, mobile: 200 },
-  { date: "2024-06-11", desktop: 92, mobile: 150 },
-  { date: "2024-06-12", desktop: 492, mobile: 420 },
-  { date: "2024-06-13", desktop: 81, mobile: 130 },
-  { date: "2024-06-14", desktop: 426, mobile: 380 },
-  { date: "2024-06-15", desktop: 307, mobile: 350 },
-  { date: "2024-06-16", desktop: 371, mobile: 310 },
-  { date: "2024-06-17", desktop: 475, mobile: 520 },
-  { date: "2024-06-18", desktop: 107, mobile: 170 },
-  { date: "2024-06-19", desktop: 341, mobile: 290 },
-  { date: "2024-06-20", desktop: 408, mobile: 450 },
-  { date: "2024-06-21", desktop: 169, mobile: 210 },
-  { date: "2024-06-22", desktop: 317, mobile: 270 },
-  { date: "2024-06-23", desktop: 480, mobile: 530 },
-  { date: "2024-06-24", desktop: 132, mobile: 180 },
-  { date: "2024-06-25", desktop: 141, mobile: 190 },
-  { date: "2024-06-26", desktop: 434, mobile: 380 },
-  { date: "2024-06-27", desktop: 448, mobile: 490 },
-  { date: "2024-06-28", desktop: 149, mobile: 200 },
-  { date: "2024-06-29", desktop: 103, mobile: 160 },
-  { date: "2024-06-30", desktop: 446, mobile: 400 },
+  { date: "2024-04-01", Income: 222, Expense: 150 },
+  { date: "2024-04-02", Income: 97, Expense: 180 },
+  { date: "2024-04-03", Income: 167, Expense: 120 },
+  { date: "2024-04-04", Income: 242, Expense: 260 },
+  { date: "2024-04-05", Income: 373, Expense: 290 },
+  { date: "2024-04-06", Income: 301, Expense: 340 },
+  { date: "2024-04-07", Income: 245, Expense: 180 },
+  { date: "2024-04-08", Income: 409, Expense: 320 },
+  { date: "2024-04-09", Income: 59, Expense: 110 },
+  { date: "2024-04-10", Income: 261, Expense: 190 },
+  { date: "2024-04-11", Income: 327, Expense: 350 },
+  { date: "2024-04-12", Income: 292, Expense: 210 },
+  { date: "2024-04-13", Income: 342, Expense: 380 },
+  { date: "2024-04-14", Income: 137, Expense: 220 },
+  { date: "2024-04-15", Income: 120, Expense: 170 },
+  { date: "2024-04-16", Income: 138, Expense: 190 },
+  { date: "2024-04-17", Income: 446, Expense: 360 },
+  { date: "2024-04-18", Income: 364, Expense: 410 },
+  { date: "2024-04-19", Income: 243, Expense: 180 },
+  { date: "2024-04-20", Income: 89, Expense: 150 },
+  { date: "2024-04-21", Income: 137, Expense: 200 },
+  { date: "2024-04-22", Income: 224, Expense: 170 },
+  { date: "2024-04-23", Income: 138, Expense: 230 },
+  { date: "2024-04-24", Income: 387, Expense: 290 },
+  { date: "2024-04-25", Income: 215, Expense: 250 },
+  { date: "2024-04-26", Income: 75, Expense: 130 },
+  { date: "2024-04-27", Income: 383, Expense: 420 },
+  { date: "2024-04-28", Income: 122, Expense: 180 },
+  { date: "2024-04-29", Income: 315, Expense: 240 },
+  { date: "2024-04-30", Income: 454, Expense: 380 },
+  { date: "2024-05-01", Income: 165, Expense: 220 },
+  { date: "2024-05-02", Income: 293, Expense: 310 },
+  { date: "2024-05-03", Income: 247, Expense: 190 },
+  { date: "2024-05-04", Income: 385, Expense: 420 },
+  { date: "2024-05-05", Income: 481, Expense: 390 },
+  { date: "2024-05-06", Income: 498, Expense: 520 },
+  { date: "2024-05-07", Income: 388, Expense: 300 },
+  { date: "2024-05-08", Income: 149, Expense: 210 },
+  { date: "2024-05-09", Income: 227, Expense: 180 },
+  { date: "2024-05-10", Income: 293, Expense: 330 },
+  { date: "2024-05-11", Income: 335, Expense: 270 },
+  { date: "2024-05-12", Income: 197, Expense: 240 },
+  { date: "2024-05-13", Income: 197, Expense: 160 },
+  { date: "2024-05-14", Income: 448, Expense: 490 },
+  { date: "2024-05-15", Income: 473, Expense: 380 },
+  { date: "2024-05-16", Income: 338, Expense: 400 },
+  { date: "2024-05-17", Income: 499, Expense: 420 },
+  { date: "2024-05-18", Income: 315, Expense: 350 },
+  { date: "2024-05-19", Income: 235, Expense: 180 },
+  { date: "2024-05-20", Income: 177, Expense: 230 },
+  { date: "2024-05-21", Income: 82, Expense: 140 },
+  { date: "2024-05-22", Income: 81, Expense: 120 },
+  { date: "2024-05-23", Income: 252, Expense: 290 },
+  { date: "2024-05-24", Income: 294, Expense: 220 },
+  { date: "2024-05-25", Income: 201, Expense: 250 },
+  { date: "2024-05-26", Income: 213, Expense: 170 },
+  { date: "2024-05-27", Income: 420, Expense: 460 },
+  { date: "2024-05-28", Income: 233, Expense: 190 },
+  { date: "2024-05-29", Income: 78, Expense: 130 },
+  { date: "2024-05-30", Income: 340, Expense: 280 },
+  { date: "2024-05-31", Income: 178, Expense: 230 },
+  { date: "2024-06-01", Income: 178, Expense: 200 },
+  { date: "2024-06-02", Income: 470, Expense: 410 },
+  { date: "2024-06-03", Income: 103, Expense: 160 },
+  { date: "2024-06-04", Income: 439, Expense: 380 },
+  { date: "2024-06-05", Income: 88, Expense: 140 },
+  { date: "2024-06-06", Income: 294, Expense: 250 },
+  { date: "2024-06-07", Income: 323, Expense: 370 },
+  { date: "2024-06-08", Income: 385, Expense: 320 },
+  { date: "2024-06-09", Income: 438, Expense: 480 },
+  { date: "2024-06-10", Income: 155, Expense: 200 },
+  { date: "2024-06-11", Income: 92, Expense: 150 },
+  { date: "2024-06-12", Income: 492, Expense: 420 },
+  { date: "2024-06-13", Income: 81, Expense: 130 },
+  { date: "2024-06-14", Income: 426, Expense: 380 },
+  { date: "2024-06-15", Income: 307, Expense: 350 },
+  { date: "2024-06-16", Income: 371, Expense: 310 },
+  { date: "2024-06-17", Income: 475, Expense: 520 },
+  { date: "2024-06-18", Income: 107, Expense: 170 },
+  { date: "2024-06-19", Income: 341, Expense: 290 },
+  { date: "2024-06-20", Income: 408, Expense: 450 },
+  { date: "2024-06-21", Income: 169, Expense: 210 },
+  { date: "2024-06-22", Income: 317, Expense: 270 },
+  { date: "2024-06-23", Income: 480, Expense: 530 },
+  { date: "2024-06-24", Income: 132, Expense: 180 },
+  { date: "2024-06-25", Income: 141, Expense: 190 },
+  { date: "2024-06-26", Income: 434, Expense: 380 },
+  { date: "2024-06-27", Income: 448, Expense: 490 },
+  { date: "2024-06-28", Income: 149, Expense: 200 },
+  { date: "2024-06-29", Income: 103, Expense: 160 },
+  { date: "2024-06-30", Income: 446, Expense: 400 },
 ];
 
 const chartConfig = {
   visitors: {
     label: "Visitors",
   },
-  desktop: {
-    label: "Desktop",
+  Income: {
+    label: "Income",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  Expense: {
+    label: "Expense",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
@@ -153,30 +153,11 @@ export default function Component() {
     <Card className="border-none dark">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b border-gray-700 py-5 sm:flex-row">
         <div className="grid flex-1 gap-1 text-center sm:text-left">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle>Income and Expenses</CardTitle>
           <CardDescription>
-            Showing total visitors for the last 3 months
+            Showing total income and expenses for the last 30 days
           </CardDescription>
         </div>
-        <Select value={timeRange} onValueChange={setTimeRange}>
-          <SelectTrigger
-            className="w-[160px] rounded-lg sm:ml-auto"
-            aria-label="Select a value"
-          >
-            <SelectValue placeholder="Last 3 months" />
-          </SelectTrigger>
-          <SelectContent className="rounded-xl">
-            <SelectItem value="90d" className="rounded-lg">
-              Last 3 months
-            </SelectItem>
-            <SelectItem value="30d" className="rounded-lg">
-              Last 30 days
-            </SelectItem>
-            <SelectItem value="7d" className="rounded-lg">
-              Last 7 days
-            </SelectItem>
-          </SelectContent>
-        </Select>
       </CardHeader>
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
@@ -185,27 +166,27 @@ export default function Component() {
         >
           <AreaChart data={filteredData}>
             <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillIncome" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-Income)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-Income)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillExpense" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-Expense)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-Expense)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
@@ -240,17 +221,17 @@ export default function Component() {
               }
             />
             <Area
-              dataKey="mobile"
+              dataKey="Expense"
               type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
+              fill="url(#fillExpense)"
+              stroke="var(--color-Expense)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="Income"
               type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
+              fill="url(#fillIncome)"
+              stroke="var(--color-Income)"
               stackId="a"
             />
             <ChartLegend content={<ChartLegendContent />} />
