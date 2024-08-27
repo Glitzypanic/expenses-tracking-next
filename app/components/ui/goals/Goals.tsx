@@ -1,4 +1,7 @@
-import { goalData } from "@/app/lib/utils/GoalData";
+"use client";
+
+// import { goalData } from "@/app/lib/utils/GoalData";
+import React, { useState } from "react";
 import { Progress } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +17,12 @@ export default function Goals({
   showLink = true,
 }: SearchParamProps) {
   const show = searchParam?.show;
+
+  const [goals, setGoals] = useState<any[]>([]);
+
+  const handleNewGoal = (data: any) => {
+    setGoals((prevGoals) => [...prevGoals, data]);
+  };
 
   return (
     <section className="flex flex-col gap-4 p-5 w-full rounded-lg bg-[#0A0A0A] h-full">
@@ -36,26 +45,26 @@ export default function Goals({
               </button>
             </Link>
           )}
-          {show && <GoalModal />}
+          {show && <GoalModal onSubmit={handleNewGoal} />}
         </div>
       </div>
 
       {/* goals */}
       <div className="flex flex-col gap-5 pr-2 overflow-y-scroll">
-        {goalData.map((data) => (
-          <div className="flex gap-5" key={data.id}>
-            <div className="bg-white rounded-lg p-1">
+        {goals.map((goal, index) => (
+          <div className="flex gap-5" key={index}>
+            {/* <div className="bg-white rounded-lg p-1">
               <Image src={data.svg} alt={data.alt} width={40} height={40} />
-            </div>
+            </div> */}
             <div className="flex flex-col w-full justify-between gap-2">
               <div className="flex justify-between items-end">
-                <h3 className="text-lg font-bold">{data.name}</h3>
+                <h3 className="text-lg font-bold">{goal.goal}</h3>
                 <p className="text-[#9ca3af] text-xs font-bold">
-                  <span>${data.goal}/</span>${data.actual}
+                  <span>${goal.total}/</span>${goal.initialAmount}
                 </p>
               </div>
               <Progress
-                value={data.progress}
+                value={40}
                 classNames={{
                   indicator: "bg-[#CCFF00]",
                 }}
