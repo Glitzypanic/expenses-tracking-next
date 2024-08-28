@@ -1,6 +1,6 @@
 "use client";
 
-import { act, useState } from "react";
+import { useState } from "react";
 
 const AddFunds = () => {
   const [amount, setAmount] = useState("");
