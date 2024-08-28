@@ -26,10 +26,7 @@ export default function Goals({
       try {
         const parsedGoals = JSON.parse(savedGoals);
         setGoals(parsedGoals);
-        console.log("Goals cargados:", parsedGoals); // Depuración
-      } catch (error) {
-        console.error("Error al parsear los goals:", error);
-      }
+      } catch (error) {}
     }
   }, []);
 
@@ -37,16 +34,12 @@ export default function Goals({
   useEffect(() => {
     try {
       localStorage.setItem("goals", JSON.stringify(goals));
-      console.log("Goals guardados:", goals); // Depuración
-    } catch (error) {
-      console.error("Error al guardar los goals:", error);
-    }
+    } catch (error) {}
   }, [goals]);
 
   const handleNewGoal = (data: any) => {
     setGoals((prevGoals) => {
       const newGoals = [...prevGoals, data];
-      console.log("Nuevo goal añadido:", newGoals); // Depuración
       return newGoals;
     });
   };
