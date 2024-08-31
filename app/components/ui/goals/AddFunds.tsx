@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-const AddFunds = () => {
+type AddFundsProps = {
+  onAddFunds: (amount: number) => void;
+};
+
+const AddFunds = ({ onAddFunds }: AddFundsProps) => {
   const [amount, setAmount] = useState("");
   const [selectValue, setSelectValue] = useState("");
   const [error, setError] = useState("");
-
-  const handleInputChange = (e: any) => {
-    setAmount(e.target.value);
-  };
 
   const handleSelectedChange = (e: any) => {
     setSelectValue(e.target.value);
@@ -23,7 +23,9 @@ const AddFunds = () => {
     } else if (selectValue === "") {
       setError("Select method is required");
     } else {
-      alert("Submitted");
+      onAddFunds(Number(amount));
+      setAmount("");
+      setError("");
       console.log("Submitted");
     }
   };
@@ -39,7 +41,7 @@ const AddFunds = () => {
               type="number"
               className="p-2 rounded-lg focus:outline-[#CCFF00]"
               value={amount}
-              onChange={handleInputChange}
+              onChange={(e) => setAmount(e.target.value)}
               placeholder="$0"
             />
             <select

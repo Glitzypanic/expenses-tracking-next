@@ -1,10 +1,15 @@
 import Image from "next/image";
 
-export default function TopExpenses() {
+interface BalanceProps {
+  amount: number;
+}
+
+const Balance: React.FC<BalanceProps> = ({ amount }) => {
   return (
     <section className="flex items-center justify-between w-full">
       <h3 className="text-8xl">
-        <span className="text-[#CCFF00]">$</span>7,400
+        <span className="text-[#CCFF00]">$</span>
+        {amount}
       </h3>
       <Image
         src={"/assets/svgs/Banknotes.svg"}
@@ -15,4 +20,6 @@ export default function TopExpenses() {
       />
     </section>
   );
-}
+};
+
+export default Balance;
