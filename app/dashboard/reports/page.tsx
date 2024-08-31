@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 import TotalBalance from "@/app/components/ui/reports/TotalBalance";
 import MonthlyExpenses from "@/app/components/ui/reports/MonthlyExpenses";
 import ReportChart from "@/app/components/ui/reports/ReportChart";
@@ -12,8 +16,14 @@ export default function ReportsPage() {
     "Alert: Don't forget to plan for upcoming big expenses.",
   ];
 
-  const randomTip =
-    financialTips[Math.floor(Math.random() * financialTips.length)];
+  const [randomTip, setRandomTip] = useState(financialTips[0]);
+
+  useEffect(() => {
+    setRandomTip(
+      financialTips[Math.floor(Math.random() * financialTips.length)]
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="rounded-lg flex md:flex-col lg:flex-row gap-5 mb-5">
