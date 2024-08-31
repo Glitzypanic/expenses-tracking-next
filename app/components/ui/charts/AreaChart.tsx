@@ -18,13 +18,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/app/providers/components/chart";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/app/providers/components/select";
+
 const chartData = [
   { date: "2024-04-01", Income: 222, Expense: 150 },
   { date: "2024-04-02", Income: 97, Expense: 180 },
