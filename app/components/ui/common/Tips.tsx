@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Tips() {
@@ -9,7 +12,13 @@ export default function Tips() {
     "Automate your savings to make it a habit.",
   ];
 
-  const randomTip = tips[Math.floor(Math.random() * tips.length)];
+  const [randomTip, setRandomTip] = useState(tips[0]);
+
+  useEffect(() => {
+    setRandomTip(tips[Math.floor(Math.random() * tips.length)]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="flex flex-col justify-center bg-[#7A306C] rounded-lg p-5 h-full">
       <Image
