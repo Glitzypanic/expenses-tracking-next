@@ -16,17 +16,17 @@ const AddFunds = ({ onAddFunds }: AddFundsProps) => {
     setError("");
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    if (amount === "") {
-      setError("Amount is required");
+    const amountValue = Number(amount.replace(/[^\d]/g, ""));
+    if (isNaN(amountValue) || amountValue <= 0) {
+      setError("Amount must be a positive number");
     } else if (selectValue === "") {
       setError("Select method is required");
     } else {
-      onAddFunds(Number(amount));
+      onAddFunds(amountValue);
       setAmount("");
       setError("");
-      console.log("Submitted");
     }
   };
 
