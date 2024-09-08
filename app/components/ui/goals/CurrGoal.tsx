@@ -1,33 +1,31 @@
-import { goalData } from "@/app/lib/utils/GoalData";
+interface Prop {
+  selectedGoalTitle: string;
+}
 
-const CurrGoal = () => {
+const CurrGoal: React.FC<Prop> = ({ selectedGoalTitle }) => {
   return (
-    <div className="bg-[#0A0A0A] rounded-lg flex flex-col justify-center p-5">
+    <div className="flex flex-col justify-center rounded-lg bg-[#0A0A0A] p-5">
       <h3 className="font-semibold text-2xl">Add saving to current goal</h3>
       <form className="w-fit inline-flex gap-3 mt-3">
         <select
           aria-label="Select a goal"
           name="Select a goal"
           id=""
-          className="px-1 rounded-lg focus:outline-[#CCFF00]"
+          className="rounded-lg px-1 focus:outline-[#CCFF00]"
         >
           <option disabled>Select a goal</option>
-          {goalData.map((item) => (
-            <option key={item.id} value={item.id}>
-              {item.name}
-            </option>
-          ))}
+          <option>{selectedGoalTitle}</option>
         </select>
 
         <input
           aria-label="Enter amount"
           type="number"
-          className="p-2 rounded-lg focus:outline-[#CCFF00]"
+          className="rounded-lg p-2 focus:outline-[#CCFF00]"
           placeholder="$0"
         />
         <button
           aria-label="button"
-          className="bg-white text-black hover:bg-[#CCFF00] px-4 rounded-lg"
+          className="rounded-lg bg-white px-4 text-black hover:bg-[#CCFF00]"
         >
           Add mount
         </button>
