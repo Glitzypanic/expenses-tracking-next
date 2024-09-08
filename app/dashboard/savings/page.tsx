@@ -2,19 +2,21 @@
 
 import { useState } from "react";
 
-import Goals from "@/app/components/ui/goals/Goals";
-import CurrGoal from "@/app/components/ui/goals/CurrGoal";
 import AddFunds from "@/app/components/ui/goals/AddFunds";
+import Balance from "@/app/components/ui/savings/Balance";
+import CurrGoal from "@/app/components/ui/goals/CurrGoal";
+import Goals from "@/app/components/ui/goals/Goals";
 import PieChart from "../../components/ui/charts/PieChart";
 import SavingCalc from "@/app/components/ui/savings/SavingCalc";
 import Tips from "@/app/components/ui/common/Tips";
-import Balance from "@/app/components/ui/savings/Balance";
+import selectedGoalTitle from "@/app/components/ui/goals/Goals";
 
-interface ExpensesPageProps {
-  searchParams: any;
+interface Props {
+  searchParams: Record<string, string> | undefined | null;
+  selectedGoalTitle: string;
 }
 
-export default function ExpensesPage({ searchParams }: ExpensesPageProps) {
+const ExpensesPage: React.FC<Props> = ({ searchParams, selectedGoalTitle }) => {
   const [amount, setAmount] = useState(0);
 
   return (
@@ -25,7 +27,7 @@ export default function ExpensesPage({ searchParams }: ExpensesPageProps) {
         </div>
         <div className="flex flex-col gap-4 w-full">
           <AddFunds onAddFunds={(amount) => setAmount(amount)} />
-          <CurrGoal />
+          <CurrGoal selectedGoalTitle={selectedGoalTitle} />
           <SavingCalc />
         </div>
         <div className="w-full">
@@ -40,4 +42,6 @@ export default function ExpensesPage({ searchParams }: ExpensesPageProps) {
       </section>
     </div>
   );
-}
+};
+
+export default ExpensesPage;
