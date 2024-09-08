@@ -1,7 +1,7 @@
+import AreaChart from "../components/ui/charts/AreaChart";
 import Goals from "../components/ui/goals/Goals";
 import SavingGoal from "../components/ui/goals/SavingGoal";
 import TableDaily from "../components/ui/tables/TableDaily";
-import AreaChart from "../components/ui/charts/AreaChart";
 
 export default function Page({ searchParams }: any) {
   return (

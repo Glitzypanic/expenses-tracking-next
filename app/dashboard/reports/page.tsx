@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 
-import TotalBalance from "@/app/components/ui/reports/TotalBalance";
+import Image from "next/image";
 import MonthlyExpenses from "@/app/components/ui/reports/MonthlyExpenses";
 import ReportChart from "@/app/components/ui/reports/ReportChart";
-import Image from "next/image";
+import TotalBalance from "@/app/components/ui/reports/TotalBalance";
 
 export default function ReportsPage() {
   const financialTips = [
@@ -26,7 +26,7 @@ export default function ReportsPage() {
   }, []);
 
   return (
-    <section className="rounded-lg flex md:flex-col lg:flex-row gap-5 mb-5">
+    <section className="rounded-lg flex md:flex-col lg:flex-row gap-5">
       <div className="w-full">
         <ReportChart />
       </div>
@@ -49,7 +49,7 @@ export default function ReportsPage() {
             Download yearly report
           </button>
         </div>
-        <div className="bg-[#307A4F] p-5 mt-5 rounded-lg flex flex-col justify-center items-center">
+        <div className="mt-5 flex flex-col items-center justify-center rounded-lg bg-[#307A4F] p-6 md:mb-5">
           <Image
             src={"/assets/svgs/Business-Report.svg"}
             alt="Report icon"
