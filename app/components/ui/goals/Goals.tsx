@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { Progress } from "@nextui-org/react";
+import GoalModal from "../modals/GoalModal";
 import Image from "next/image";
 import Link from "next/link";
-import GoalModal from "../modals/GoalModal";
+import React, { useState, useEffect } from "react";
 
 type SearchParamProps = {
   searchParam: Record<string, string> | undefined | null;
@@ -18,6 +18,7 @@ export default function Goals({
   const show = searchParam?.show;
 
   const [goals, setGoals] = useState<any[]>([]);
+  const [selectedGoalTitle, setSelectedGoalTitle] = useState<string>("");
 
   // Cargar los objetivos desde localStorage al montar el componente
   useEffect(() => {
@@ -42,17 +43,18 @@ export default function Goals({
       const newGoals = [...prevGoals, data];
       return newGoals;
     });
+    setSelectedGoalTitle(data.goal);
   };
 
   return (
-    <section className="flex flex-col gap-4 p-5 w-full rounded-lg bg-[#0A0A0A] h-full">
+    <section className="flex h-full w-full flex-col gap-4 rounded-lg bg-[#0A0A0A] p-5">
       <div className="flex justify-between">
         <h2 className="text-3xl font-bold">My planning</h2>
         <div>
           {showLink && (
             <Link href="/dashboard/savings?show=true">
               <button
-                className="h-fit border-2 inline-flex items-center gap-2 rounded-lg p-2 hover:border-[#CCFF00]"
+                className="inline-flex h-fit items-center gap-2 rounded-lg border-2 p-2 hover:border-[#CCFF00]"
                 aria-label="button"
               >
                 <Image
@@ -70,7 +72,7 @@ export default function Goals({
       </div>
 
       {/* goals */}
-      <div className="flex flex-col gap-5 pr-2 overflow-y-scroll">
+      <div className="flex flex-col gap-5 overflow-y-scroll pr-2">
         {goals.map((goal, index) => (
           <div className="flex gap-5" key={index}>
             <div className="flex flex-col w-full justify-between gap-2">
